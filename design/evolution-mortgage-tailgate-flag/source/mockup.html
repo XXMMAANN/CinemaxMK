@@ -1,0 +1,51 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;padding:0}
+.scene{width:1600px;height:1000px;position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#dbe9f6 0%,#eef4fa 55%,#f7f9fb 100%)}
+.scene svg{position:absolute;inset:0}
+</style></head><body><div class="scene">
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+  <filter id="wave" x="-15%" y="-25%" width="130%" height="150%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.0028 0.0062" numOctaves="2" seed="11" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="soft" x="-20%" y="-20%" width="140%" height="160%"><feGaussianBlur stdDeviation="22"/></filter>
+  <linearGradient id="folds" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0"    stop-color="#000" stop-opacity="0.34"/>
+    <stop offset="0.10" stop-color="#fff" stop-opacity="0.06"/>
+    <stop offset="0.24" stop-color="#000" stop-opacity="0.26"/>
+    <stop offset="0.40" stop-color="#fff" stop-opacity="0.10"/>
+    <stop offset="0.56" stop-color="#000" stop-opacity="0.22"/>
+    <stop offset="0.72" stop-color="#fff" stop-opacity="0.08"/>
+    <stop offset="0.88" stop-color="#000" stop-opacity="0.24"/>
+    <stop offset="1"    stop-color="#fff" stop-opacity="0.04"/>
+  </linearGradient>
+  <linearGradient id="pole" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#8a8f96"/><stop offset="0.35" stop-color="#e9ecef"/><stop offset="0.6" stop-color="#c3c8ce"/><stop offset="1" stop-color="#6f757c"/>
+  </linearGradient>
+  <radialGradient id="finial" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#fff3c4"/><stop offset="0.5" stop-color="#d9a627"/><stop offset="1" stop-color="#7a5a0e"/></radialGradient>
+  <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0.10"/><stop offset="0.5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="0.12"/></linearGradient>
+</defs>
+<!-- ground shadow -->
+<ellipse cx="880" cy="930" rx="560" ry="26" fill="#0b1f3f" opacity="0.10" filter="url(#soft)"/>
+<!-- flag shadow -->
+<g transform="translate(262,120) skewY(-2.2)" filter="url(#wave)" opacity="0.28">
+  <rect x="24" y="34" width="1060" height="636" fill="#0b1f3f" filter="url(#soft)"/>
+</g>
+<!-- flag -->
+<g transform="translate(262,120) skewY(-2.2)">
+  <g filter="url(#wave)">
+    <image xlink:href="flag_final_full.png" width="1060" height="636" preserveAspectRatio="none"/>
+    <rect width="1060" height="636" fill="url(#folds)" style="mix-blend-mode:soft-light"/>
+    <rect width="1060" height="636" fill="url(#sheen)"/>
+  </g>
+</g>
+<rect x="258" y="118" width="26" height="626" fill="#0b1f3f"/>
+<rect x="258" y="118" width="26" height="626" fill="url(#sheen)"/>
+<!-- pole in front of the hoist -->
+<rect x="246" y="58" width="16" height="900" fill="url(#pole)"/>
+<rect x="238" y="118" width="32" height="8" rx="2" fill="#8d939a"/>
+<rect x="238" y="734" width="32" height="8" rx="2" fill="#8d939a"/>
+<circle cx="254" cy="44" r="16" fill="url(#finial)"/>
+</svg></div></body></html>
