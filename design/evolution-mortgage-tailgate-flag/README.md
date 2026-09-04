@@ -3,7 +3,7 @@
 Print-ready artwork for a 3 ft × 5 ft (36 × 60 in) landscape sponsor flag in three colorways,
 built from the approved logo files in the brand kit and the rules in the Design & Template HQ.
 
-- **Black / gold** (for the West Point tailgate): lockup in Army West Point gold `#D4BF91` (Pantone 467 C) on a black field with a charcoal glow and the helix watermark in the same gold at 22 %.
+- **Black / gold** (for the West Point tailgate): lockup in Army West Point gold `#D3BC8D` (Pantone 467 C) on a black field with a charcoal glow and the helix watermark in the same gold at 22 %.
 - **Navy**: white logo lockup on a deep navy field. Reads from across a lot, hides dust and handling.
 - **White**: the full-color logo (blue gradient, red helix) on a white field, navy type.
 
@@ -26,7 +26,7 @@ A version with the tagline "Home loans made simple." and the NMLS / Equal Housin
 
 - Trim size 60 × 36 in, landscape. Hoist (pole side) is the left edge.
 - Bleed 1 in. Safe area 3 in on all sides, 4 in on the hoist (room for a pole sleeve or grommet header).
-- Colors (RGB masters, printer converts): navy `#0B1F3F`, glow centre `#163D72`, deep blue `#1456AA`, cyan `#21A0DE`, white. Black colorway: field `#0A0A0A` to `#3B3B3B`, gold `#D4BF91` (Pantone 467 C), helix in gold `#D4BF91` at 22 %.
+- Colors (RGB masters, printer converts): navy `#0B1F3F`, glow centre `#163D72`, deep blue `#1456AA`, cyan `#21A0DE`, white. Black colorway: field `#0A0A0A` to `#3B3B3B`, gold `#D3BC8D` (Pantone 467 C), helix in gold `#D3BC8D` at 22 %.
 - Type (alternate version only): Poppins SemiBold (tagline) and Inter Medium (footer), converted to outlines. The main files carry no text besides the logo.
 - Logos: approved white lockup (vectorized from the brand PNG) on navy; approved full-color lockup on white. Helix mark repeated at 6–7 % as a fly-edge watermark.
 

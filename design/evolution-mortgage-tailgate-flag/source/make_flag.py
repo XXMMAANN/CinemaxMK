@@ -9,7 +9,7 @@ from fontTools.pens.transformPen import TransformPen
 NAVY, GLOW = '#0B1F3F', '#163D72'
 BLUE_DEEP, BLUE_MID, BLUE_CYAN = '#1456AA', '#1088C8', '#21A0DE'
 WHITE = '#FFFFFF'
-ARMY_GOLD, INK_BLACK, CHARCOAL = '#D4BF91', '#0A0A0A', '#3B3B3B'   # Army West Point gold; black colorway field
+ARMY_GOLD, INK_BLACK, CHARCOAL = '#D3BC8D', '#0A0A0A', '#3B3B3B'   # Army West Point gold; black colorway field
 
 class Typesetter:
     def __init__(self, path):
