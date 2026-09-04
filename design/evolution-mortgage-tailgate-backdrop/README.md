@@ -17,16 +17,16 @@ Each set has: `PRINT-bleed-2in.pdf` (send to the printer; trim + 2 in bleed all 
 
 ## Art
 
-- Evolution lockup: 25 in wide, vector, filled with Army gold `#D3BC8D` on black (full-color on white).
-- Army West Point shield: 12.5 in tall (about 10.7 in wide), traced to vector from the supplied logo file (`source/army-west-point-gold.svg`, `source/army-west-point-2color.svg`). On black it is the gold-only, one-color reproduction; on white it is black + gold.
+- Evolution lockup: 16.7 in wide, vector, filled with Army gold `#D3BC8D` on black (full-color on white).
+- Army West Point shield: 8.3 in tall (about 7.2 in wide), traced to vector from the supplied logo file (`source/army-west-point-gold.svg`, `source/army-west-point-2color.svg`). On black it is the gold-only, one-color reproduction; on white it is black + gold.
 - Gold `#D3BC8D` is sampled from the supplied logo and equals the published Army gold, RGB 211 / 188 / 141, Pantone 467 C. Ask the printer to match 467 C.
 - Black field `#0A0A0A` with a soft lift to `#262626` at the centre.
 
 ## Pattern (diamond)
 
-- Rows alternate: a row of lockups, then a row of shields, and every row shifts half a step. Lockups repeat every 36 in along a row, rows are 18 in apart, so the half-step equals the row pitch and each mark sits inside a true 45° diamond of the other mark.
+- Rows alternate: a row of lockups, then a row of shields, and every row shifts half a step. Marks repeat every 24 in along a row, rows are 12 in apart, so the half-step equals the row pitch and each mark sits inside a true 45° diamond of the other mark. On the 8 ft wall that is 4 columns and 8 rows.
 - The lattice is centred on the wall so edge cut-offs are symmetric, and a shield row lands at eye line on the 8 ft wall.
-- Logos sit at 8-12.5 in tall, the range that stays readable behind a person in a phone photo.
+- Logos sit at about 8 in tall, the low end of the range that stays readable behind a person in a phone photo. Pass a larger pitch (sixth argument, e.g. `36`) for fewer, bigger marks.
 - The earlier in-row stagger is still available: pass `stagger` as the fifth argument to the generator.
 
 ## Ordering notes

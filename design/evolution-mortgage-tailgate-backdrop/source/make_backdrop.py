@@ -33,11 +33,12 @@ def evo_markup(width, dark, fill=WHITE):
             f'<image href="{COLOR_LOGO_URI}" width="{LOGO_W}" height="{LOGO_H}" clip-path="url(#evoclip)" preserveAspectRatio="none"/></g>')
 
 def build(W=96.0, H=96.0, bleed=2.0, colorway='white', emblem=None, guides=False,
-          evo_w=26.0, emblem_box=13.0, pitch_x=34.0, pitch_y=15.5, pattern='diamond'):
+          evo_w=26.0, emblem_box=13.0, pitch_x=34.0, pitch_y=15.5, pattern='diamond', pitch=24.0):
     if pattern == 'diamond':
         # rhombic lattice: rows alternate mark, every row shifts half a step, and the half-step equals the row
-        # pitch so each mark sits in a true 45-degree diamond of the other mark
-        evo_w, emblem_box, pitch_x, pitch_y = 25.0, 12.5, 36.0, 18.0
+        # pitch so each mark sits in a true 45-degree diamond of the other mark. `pitch` scales the whole lattice.
+        k = pitch / 36.0
+        evo_w, emblem_box, pitch_x, pitch_y = 25.0 * k, 12.5 * k, pitch, pitch / 2
     dark = colorway in ('navy', 'black')
     black = colorway == 'black'
     TW, TH = W + 2*bleed, H + 2*bleed
@@ -83,9 +84,10 @@ if __name__ == '__main__':
     colorway = sys.argv[3] if len(sys.argv) > 3 else 'white'
     emblem = sys.argv[4] if len(sys.argv) > 4 and sys.argv[4] != '-' else None
     pattern = sys.argv[5] if len(sys.argv) > 5 else 'diamond'
+    pitch = float(sys.argv[6]) if len(sys.argv) > 6 else 24.0
     base = f'backdrop_{int(W)}x{int(H)}_{colorway}' + ('' if pattern == 'diamond' else f'_{pattern}')
     for name, bleed, guides in [(base, 0, False), (base + '_bleed', 2.0, False), (base + '_proof', 2.0, True)]:
-        svg = build(W, H, bleed, colorway, emblem, guides, pattern=pattern)
+        svg = build(W, H, bleed, colorway, emblem, guides, pattern=pattern, pitch=pitch)
         open(f'build/{name}.svg', 'w').write(svg)
         open(f'build/{name}.html', 'w').write(html_wrap(svg, W + 2*bleed, H + 2*bleed))
         print('wrote', name, len(svg)//1024, 'KB')
