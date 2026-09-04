@@ -1,7 +1,7 @@
 # Evolution Mortgage × Army West Point – step-and-repeat backdrop
 
-Black photo wall for the tailgate: the Evolution Mortgage lockup alternating with the Army West Point shield,
-both in Army gold, so the wall matches the black / gold flag.
+Black photo wall for the tailgate: the Evolution Mortgage lockup and the Army West Point shield in a diamond
+step-and-repeat, both in Army gold, so the wall matches the black / gold flag.
 
 ## Sizes and colorways
 
@@ -17,15 +17,17 @@ Each set has: `PRINT-bleed-2in.pdf` (send to the printer; trim + 2 in bleed all 
 
 ## Art
 
-- Evolution lockup: 26 in wide, vector, filled with Army gold `#D3BC8D` on black (full-color on white).
-- Army West Point shield: 13 in tall (about 11.2 in wide), traced to vector from the supplied logo file (`source/army-west-point-gold.svg`, `source/army-west-point-2color.svg`). On black it is the gold-only, one-color reproduction; on white it is black + gold.
+- Evolution lockup: 25 in wide, vector, filled with Army gold `#D3BC8D` on black (full-color on white).
+- Army West Point shield: 12.5 in tall (about 10.7 in wide), traced to vector from the supplied logo file (`source/army-west-point-gold.svg`, `source/army-west-point-2color.svg`). On black it is the gold-only, one-color reproduction; on white it is black + gold.
 - Gold `#D3BC8D` is sampled from the supplied logo and equals the published Army gold, RGB 211 / 188 / 141, Pantone 467 C. Ask the printer to match 467 C.
 - Black field `#0A0A0A` with a soft lift to `#262626` at the centre.
 
-## Pattern
+## Pattern (diamond)
 
-- Grid pitch 34 in across, 15.5 in down, every other row offset by half a step, centred on the wall so edge cut-offs are symmetric.
-- Logos sit at 8-13 in tall, the range that stays readable behind a person in a phone photo.
+- Rows alternate: a row of lockups, then a row of shields, and every row shifts half a step. Lockups repeat every 36 in along a row, rows are 18 in apart, so the half-step equals the row pitch and each mark sits inside a true 45° diamond of the other mark.
+- The lattice is centred on the wall so edge cut-offs are symmetric, and a shield row lands at eye line on the 8 ft wall.
+- Logos sit at 8-12.5 in tall, the range that stays readable behind a person in a phone photo.
+- The earlier in-row stagger is still available: pass `stagger` as the fifth argument to the generator.
 
 ## Ordering notes
 
