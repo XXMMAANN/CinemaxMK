@@ -9,6 +9,7 @@ from fontTools.pens.transformPen import TransformPen
 NAVY, GLOW = '#0B1F3F', '#163D72'
 BLUE_DEEP, BLUE_MID, BLUE_CYAN = '#1456AA', '#1088C8', '#21A0DE'
 WHITE = '#FFFFFF'
+ARMY_GOLD, INK_BLACK, CHARCOAL = '#D4BF91', '#0A0A0A', '#3B3B3B'   # Army West Point gold; black colorway field
 
 class Typesetter:
     def __init__(self, path):
@@ -94,9 +95,15 @@ def eho_mark(x, y, h, fill=WHITE):
 
 def build(variant='A', bleed=0.0, guides=False, W=60.0, H=36.0, colorway='navy', layout='logo'):
     TW, TH = W + 2*bleed, H + 2*bleed
-    dark = colorway == 'navy'
-    INK = WHITE if dark else NAVY            # text / marks
-    WM_FILL, WM_OP = (WHITE, 0.07) if dark else (BLUE_DEEP, 0.06)
+    dark = colorway in ('navy', 'black')
+    if colorway == 'black':
+        BG_EDGE, BG_CENTER = INK_BLACK, CHARCOAL
+        INK = ARMY_GOLD                      # lettering in Army West Point gold
+        WM_FILL, WM_OP = WHITE, 0.26         # grey helix, as in the reference
+    else:
+        BG_EDGE, BG_CENTER = NAVY, GLOW
+        INK = WHITE if dark else NAVY        # text / marks
+        WM_FILL, WM_OP = (WHITE, 0.07) if dark else (BLUE_DEEP, 0.06)
     FOOT_OP = 0.9 if dark else 0.85
     o = []  # content in flag coordinates; wrapped in translate(bleed, bleed)
     cx = W/2 + 0.5          # optical center, nudged toward the fly (away from the pole sleeve)
@@ -159,7 +166,7 @@ def build(variant='A', bleed=0.0, guides=False, W=60.0, H=36.0, colorway='navy',
             lab, _ = INT_SB.path(f'BLEED {bleed:g} in', 0.6, -bleed+0.4, -bleed+1.0)
             o.append(f'<path d="{lab}" fill="#FF3B7A"/>')
     defs = f'''<defs>
-  <radialGradient id="glow" cx="0.5" cy="0.40" r="0.68"><stop offset="0" stop-color="{GLOW}"/><stop offset="1" stop-color="{NAVY}"/></radialGradient>
+  <radialGradient id="glow" cx="0.5" cy="0.40" r="0.68"><stop offset="0" stop-color="{BG_CENTER}"/><stop offset="1" stop-color="{BG_EDGE}"/></radialGradient>
   <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{BLUE_DEEP}"/><stop offset="1" stop-color="{BLUE_CYAN}"/></linearGradient>
   <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="{BLUE_CYAN if dark else BLUE_DEEP}"/><stop offset="1" stop-color="{'#4FC3F0' if dark else BLUE_CYAN}"/></linearGradient>
   <clipPath id="page"><rect x="{-bleed}" y="{-bleed}" width="{TW}" height="{TH}"/></clipPath>
