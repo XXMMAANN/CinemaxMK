@@ -99,7 +99,7 @@ def build(variant='A', bleed=0.0, guides=False, W=60.0, H=36.0, colorway='navy',
     if colorway == 'black':
         BG_EDGE, BG_CENTER = INK_BLACK, CHARCOAL
         INK = ARMY_GOLD                      # lettering in Army West Point gold
-        WM_FILL, WM_OP = WHITE, 0.26         # grey helix, as in the reference
+        WM_FILL, WM_OP = ARMY_GOLD, 0.22     # gold helix, kept transparent so it stays in the background
     else:
         BG_EDGE, BG_CENTER = NAVY, GLOW
         INK = WHITE if dark else NAVY        # text / marks
