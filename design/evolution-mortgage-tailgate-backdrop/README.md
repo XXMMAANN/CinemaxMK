@@ -15,6 +15,16 @@ Each set has: `PRINT-bleed-2in.pdf` (send to the printer; trim + 2 in bleed all 
 `PROOF-guides.pdf` (trim, bleed, eye line and the lower 24 in people usually hide), editable `.svg` masters and a
 `50ppi.png` raster fallback. `preview-*.png`, `mockup-*.png` and `proof-*.png` are for approvals.
 
+## Fabric pop-up straight display, 10 × 8 ft (printer template)
+
+Built on the printer's template for the fabric pop-up (file `147.51 × 89.51 in` = 2 in bleed + 12.96 in end cap + 117.60 × 89.50 in visible front + end cap + 2 in bleed; the template has no top or bottom bleed). The pattern sits on the front face only and the end caps carry nothing but the black field, so the sides of the display are plain.
+
+- Every mark is whole and inside the front safe area (103.64 × 75.52 in): 16 lockups at 15.97 in wide and 15 shields at 7.99 in tall on a 23 in diamond pitch, 7 rows. Nothing straddles the rounded corner where the front wraps into the caps.
+- The black field and centre glow run edge to edge, caps and bleed included, so there is no seam at the cap.
+- Files: `…-popup-10x8ft-black-PRINT-147.51x89.51in.pdf` (**send this**, vector, exact template size), `…-PROOF-guides.pdf` (template zones drawn over the art, proof only), `…-popup-10x8ft-black.svg`, `…-50ppi.png`, `preview-popup-10x8ft-black.png`, `proof-popup-10x8ft-black.png`.
+- Canva copy, editable: <https://www.canva.com/design/DAHVY8KbsfA/edit> (6194 × 3758 px, 42 px per inch, every mark its own element; sources in `canva-layers/popup-10x8ft-black-*`).
+- Regenerate with `python3 source/make_popup.py [pitch in] [canva px per in]`; the template dimensions are constants at the top of the script.
+
 ## Art
 
 - Evolution lockup: 16.7 in wide, vector, filled with Army gold `#D3BC8D` on black (full-color on white).
