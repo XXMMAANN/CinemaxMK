@@ -42,3 +42,7 @@ The Army West Point stencil face is a proprietary typeface with no public font f
 Editable copy: <https://www.canva.com/design/DAHVYjwNYPA/edit>. The page is 5760 × 3456 px, which Canva treats as 60 × 36 in (96 px per inch), trim size with no bleed. Imported from the trim PDF: the lettering and frame are vector shapes, the crest is an image.
 
 To print from Canva: Share → Download → PDF Print, finished size 60 × 36 in, no bleed in the file. The `PRINT-bleed-1in.pdf` here remains the reference print file.
+
+## Canva fonts for this lettering
+
+`canva-font-matches.png` sets "WEST POINT / CLASS OF 2030" in the Canva fonts closest to the reference banner's heavy slab serif. Closest first: **Alfa Slab One**, **Bevan** (heavier, a little more condensed), then Rokkitt Black and Kameron Bold (Rockwell-style geometry but lighter), Ultra and Holtwood One SC (heavier and wider). If the account's font list includes Rockwell, Rockwell Extra Bold is the genuine article. Arch the top line with Text → Effects → Curve.
