@@ -10,8 +10,10 @@ for e in d['elements']:
     url = f'{raw}/{evo if e["kind"] == "evo" else emb}'
     alt = 'Evolution Mortgage logo, gold' if e['kind'] == 'evo' else 'Army West Point shield, gold'
     imgs.append(f'<img src="{url}" alt="{alt}" style="position:absolute;left:{e["left"]}px;top:{e["top"]}px;width:{e["width"]}px;height:{e["height"]}px">')
-html = (f'<!doctype html><html><head><meta charset="utf-8"><title>Evolution Mortgage x West Point – Step and Repeat {d["W"]/12:g}x{d["H"]/12:g} ft (editable)</title></head>'
-        f'<body style="margin:0"><div data-document-role="page" data-label="{d["W"]/12:g}x{d["H"]/12:g} ft black" style="position:relative;width:{pw}px;height:{ph}px;overflow:hidden;background:#0A0A0A">'
+title = d.get('title') or f'Evolution Mortgage x West Point – Step and Repeat {d["W"]/12:g}x{d["H"]/12:g} ft (editable)'
+label = d.get('label') or f'{d["W"]/12:g}x{d["H"]/12:g} ft black'
+html = (f'<!doctype html><html><head><meta charset="utf-8"><title>{title}</title></head>'
+        f'<body style="margin:0"><div data-document-role="page" data-label="{label}" style="position:relative;width:{pw}px;height:{ph}px;overflow:hidden;background:#0A0A0A">'
         f'<img src="{raw}/{bg}" alt="Black field with centre glow" style="position:absolute;left:0;top:0;width:{pw}px;height:{ph}px">'
         + ''.join(imgs) + '</div></body></html>')
 open(out, 'w').write(html)
