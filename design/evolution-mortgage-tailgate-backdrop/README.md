@@ -58,3 +58,12 @@ Editable copies in the Evolution Mortgage Canva account, imported from the trim-
 
 - Canva caps a page at 8000 px, so the walls are scaled (the 8 ft wall is 4995 px square, about 52 px per inch). Everything on the page is vector, so the printer simply scales the export to the finished size.
 - To print from Canva: Share → Download → PDF Print, and tell the printer the finished size (96 × 96 in or 120 × 96 in) and that the file has no bleed. The `PRINT-bleed-2in.pdf` files in this folder remain the reference print files.
+
+### Editable 8 × 10 ft (native Canva elements)
+
+<https://www.canva.com/design/DAHVY9LnOu4/edit> is the 8 ft tall × 10 ft wide wall (120 × 96 in) rebuilt from native Canva elements instead of a PDF import: a glow background image, then 20 gold lockups and 24 gold shields, each its own image element at the exact lattice position of the print file (24 in pitch, 12 in rows, half-step offset). Any mark can be moved, resized, deleted or swapped for another upload in the editor, and the background image can be replaced or removed to change the field.
+
+- Page 5520 × 4416 px, 46 px per inch. Canva caps a page at about 25 million pixels, so the wall cannot be laid out at 96 px per inch; the printer scales the export to 120 × 96 in.
+- Sources in `canva-layers/`: `8x10ft-black-canva.html` (the file Canva imports), `8x10ft-black-elements.json` (element positions), `8x10ft-black-background.png` (glow field) and `army-west-point-gold.png` (shield, transparent). The gold lockup is `../evolution-mortgage-tailgate-flag/canva-layers/black-logo.png`.
+- To rebuild at another size or pitch: `python3 source/canva_backdrop.py <width in> <height in> <px per in> [pitch in]`, then `python3 source/make_canva_html.py <elements.json> <out.html> <raw GitHub base url> <background png> <lockup png> <shield png>`, commit, and import the HTML into Canva from a commit-pinned raw URL (the branch URL is cached for several minutes and can hand Canva a stale file).
+- Two earlier imports titled "zz TEST COPY … safe to delete" in the Canva account are clipped by that page cap and can be deleted.
