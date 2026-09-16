@@ -36,3 +36,9 @@ The Army West Point stencil face is a proprietary typeface with no public font f
 - Hung on the tent or a fence like the reference banner, single-sided with brass grommets at the corners is fine. The frame is inset enough for corner grommets.
 - Matte polyester, dye-sublimation; match Pantone 467 C for the gold. The crest's red, blue and gold print as-is.
 - Confirm the crest and wordmark may be used under the class or sponsorship guidelines.
+
+## Canva
+
+Editable copy: <https://www.canva.com/design/DAHVYjwNYPA/edit>. The page is 5760 × 3456 px, which Canva treats as 60 × 36 in (96 px per inch), trim size with no bleed. Imported from the trim PDF: the lettering and frame are vector shapes, the crest is an image.
+
+To print from Canva: Share → Download → PDF Print, finished size 60 × 36 in, no bleed in the file. The `PRINT-bleed-1in.pdf` here remains the reference print file.

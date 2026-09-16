@@ -45,3 +45,16 @@ Arguments: width in, height in, `black` / `white` / `navy`, emblem SVG or PNG pa
 ```
 python3 make_backdrop.py 96 96 black army-west-point-gold.svg
 ```
+
+## Canva
+
+Editable copies in the Evolution Mortgage Canva account, imported from the trim-size PDFs. The lockups and shields came in as vector shapes.
+
+| Size | Canva design |
+| --- | --- |
+| 8 × 8 ft, black | <https://www.canva.com/design/DAHVYn_9P38/edit> |
+| 10 × 8 ft, black | <https://www.canva.com/design/DAHVYufpLoA/edit> |
+| 8 × 8 ft, white | <https://www.canva.com/design/DAHVYmldRXA/edit> |
+
+- Canva caps a page at 8000 px, so the walls are scaled (the 8 ft wall is 4995 px square, about 52 px per inch). Everything on the page is vector, so the printer simply scales the export to the finished size.
+- To print from Canva: Share → Download → PDF Print, and tell the printer the finished size (96 × 96 in or 120 × 96 in) and that the file has no bleed. The `PRINT-bleed-2in.pdf` files in this folder remain the reference print files.

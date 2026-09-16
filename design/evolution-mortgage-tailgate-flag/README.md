@@ -41,3 +41,16 @@ A version with the tagline "Home loans made simple." and the NMLS / Equal Housin
 
 - The main files are logo only: no claims, no rates, no officer names.
 - If the flag needs the company NMLS #2432729 and the Equal Housing Opportunity mark, use the files in `alternates/with-tagline/` or regenerate with `python3 make_flag.py A navy full`; a loan officer line ("Name · NMLS #xxxxxx") can be added to that footer.
+
+## Canva
+
+Editable copies in the Evolution Mortgage Canva account. Pages are 5760 × 3456 px, which Canva treats as 60 × 36 in (96 px per inch), trim size with no bleed.
+
+| Colorway | Canva design |
+| --- | --- |
+| Black / gold | <https://www.canva.com/design/DAHVYrdey-Y/edit> |
+| Navy | <https://www.canva.com/design/DAHVYiSP1Vo/edit> |
+| White | <https://www.canva.com/design/DAHVYuiwM1E/edit> |
+
+- Each design is built from the three layers in `canva-layers/` (field, helix watermark, logo) instead of the flattened PDF import, so the watermark keeps its transparency (22 % on black, 7 % on navy, 6 % on white) and every layer can be moved, resized or swapped in the editor.
+- To print from Canva: Share → Download → PDF Print, and tell the printer the finished size is 60 × 36 in and that the file has no bleed (they extend the edges or use the hem allowance). The `PRINT-bleed-1in.pdf` files in this folder remain the reference print files.
