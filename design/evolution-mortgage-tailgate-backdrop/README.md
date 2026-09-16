@@ -23,6 +23,7 @@ Built on the printer's template for the fabric pop-up (file `147.51 × 89.51 in`
 - The black field and centre glow run edge to edge, caps and bleed included, so there is no seam at the cap.
 - Files: `…-popup-10x8ft-black-PRINT-147.51x89.51in.pdf` (**send this**, vector, exact template size), `…-PROOF-guides.pdf` (template zones drawn over the art, proof only), `…-popup-10x8ft-black.svg`, `…-50ppi.png`, `preview-popup-10x8ft-black.png`, `proof-popup-10x8ft-black.png`.
 - Canva copy, editable: <https://www.canva.com/design/DAHVY8KbsfA/edit> (6194 × 3758 px, 42 px per inch, every mark its own element; sources in `canva-layers/popup-10x8ft-black-*`).
+- For the printer's **online design tool** (canvas 144 × 90 in, fold lines 13 in from each edge, 118 in front): `…-DESIGNTOOL-144x90in-21600x13500px-150ppi.jpg` (150 px per inch of the finished size) or the smaller `…-14400x9000px-100ppi.jpg`. Same layout, proportioned to the tool's canvas so it fills it exactly once dragged to the corners; `proof-popup-10x8ft-black-designtool-canvas.png` shows the zones. Generated with `python3 source/make_popup.py 23 42 canvas` and `source/render_big.js` (tiled render, no browser size cap).
 - Regenerate with `python3 source/make_popup.py [pitch in] [canva px per in]`; the template dimensions are constants at the top of the script.
 
 ## Art
