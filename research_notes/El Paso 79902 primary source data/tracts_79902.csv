@@ -1,0 +1,10 @@
+GEOID_TRACT_20,tract_name,arealand_tract_m2,arealand_part_in_79902_m2,areawater_part_m2,share_of_tract_land_in_79902_pct,share_of_zcta_land_pct,sliver_flag_lt5pct,source
+48141001111,Census Tract 11.11,11576614,358655,0,3.1,2.1,yes (tract share),Census 2020 ZCTA5-to-tract relationship file tab20_zcta520_tract20_natl.txt
+48141001115,Census Tract 11.15,3112241,1034163,0,33.2,6.1,no,Census 2020 ZCTA5-to-tract relationship file tab20_zcta520_tract20_natl.txt
+48141001400,Census Tract 14,7957689,2466935,0,31.0,14.6,no,Census 2020 ZCTA5-to-tract relationship file tab20_zcta520_tract20_natl.txt
+48141001501,Census Tract 15.01,5857753,5647857,0,96.4,33.4,no,Census 2020 ZCTA5-to-tract relationship file tab20_zcta520_tract20_natl.txt
+48141001502,Census Tract 15.02,2665431,2665431,0,100.0,15.8,no,Census 2020 ZCTA5-to-tract relationship file tab20_zcta520_tract20_natl.txt
+48141001600,Census Tract 16,1470079,1310376,0,89.1,7.7,no,Census 2020 ZCTA5-to-tract relationship file tab20_zcta520_tract20_natl.txt
+48141001700,Census Tract 17,1127843,157446,0,14.0,0.9,yes (ZCTA share),Census 2020 ZCTA5-to-tract relationship file tab20_zcta520_tract20_natl.txt
+48141002201,Census Tract 22.01,2260325,2101555,30595,93.0,12.4,no,Census 2020 ZCTA5-to-tract relationship file tab20_zcta520_tract20_natl.txt
+48141002202,Census Tract 22.02,1173050,1173050,0,100.0,6.9,no,Census 2020 ZCTA5-to-tract relationship file tab20_zcta520_tract20_natl.txt
