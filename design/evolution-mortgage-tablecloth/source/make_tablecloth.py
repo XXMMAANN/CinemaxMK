@@ -15,10 +15,26 @@ def lockup(cx, cy, w):
     x0, y0 = cx - w / 2 - INK[0] * s, cy - ih / 2 - INK[1] * s
     return f'<path d="{LOGO_D}" fill="{WHITE}" fill-rule="evenodd" transform="translate({x0:.4f},{y0:.4f}) scale({s:.6f})"/>', ih
 
+REP_W, REP_PX, REP_PY = 11.0, 18.0, 9.0      # repeat: lockup width, step along a row, row spacing (diamond offset)
+
+def repeat_marks(bleed=0.0):
+    """Diamond step-and-repeat: six whole rows (4.5 in from top and bottom), every other row shifted half a step, running off the sides."""
+    out = []
+    for j in range(-4, 5):
+        cy = H/2 + (j + 0.5)*REP_PY
+        for i in range(-4, 5):
+            cx = W/2 + (i + (0.5 if j % 2 else 0)) * REP_PX
+            if -bleed - REP_W/2 < cx < W + bleed + REP_W/2 and -bleed - 4 < cy < H + bleed + 4:
+                out.append(dict(cx=cx, cy=cy))
+    return out
+
 def build(layout='front', bleed=0.0, guides=False):
     TW, TH = W + 2*bleed, H + 2*bleed
     if layout == 'front':
         logo, ih = lockup(W/2, H - DROP/2, 22.0)
+    elif layout == 'repeat':
+        parts = [lockup(m['cx'], m['cy'], REP_W)[0] for m in repeat_marks(bleed)]
+        logo, ih = ''.join(parts), lockup(0, 0, REP_W)[1]
     else:
         logo, ih = lockup(W/2, H/2, 34.0)
     g = []
@@ -38,7 +54,7 @@ def build(layout='front', bleed=0.0, guides=False):
 
 if __name__ == '__main__':
     os.makedirs('build/tablecloth', exist_ok=True)
-    for layout in ('front', 'center'):
+    for layout in ('front', 'center', 'repeat'):
         for name, bleed, guides in (('trim', 0, False), ('bleed-1in', 1.0, False), ('proof', 0, True)):
             svg, ih = build(layout, bleed, guides)
             base = f'build/tablecloth/{layout}-{name}'
