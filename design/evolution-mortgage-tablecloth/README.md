@@ -12,6 +12,10 @@ The main file puts the lockup on the **front drop**, 22 in wide, centred in the 
 table top is covered with food and coolers. `alternates/logo-centered/` has the lockup 34 in wide in the middle of the
 cloth, for a table that will stay clear or for a different table size.
 
+`alternates/repeat/` is an all-over step-and-repeat: 11 in lockups in a diamond pattern, 18 in apart along each row and 9 in
+between rows, every other row shifted half a step. Six whole rows sit between the top and bottom edges, and the pattern runs
+off both sides so it reads as continuous when it drapes.
+
 ## Files
 
 | File | Use |
@@ -20,6 +24,16 @@ cloth, for a table that will stay clear or for a different table size.
 | `…-trim.pdf` | Exact 72 × 54 in, for printers that add their own hem or bleed. |
 | `…-PROOF-guides.pdf`, `proof.png` | Proof only: trim, the 6 ft table top and the front drop. |
 | `….svg` | Editable vector master. |
+
+## Canva
+
+Editable copy with all three layouts as pages (front drop, centered, repeat):
+<https://www.canva.com/design/DAHZQAaUtDY/edit>
+
+- Each page is a navy background image plus separate white logo elements, so any logo can be moved, resized or deleted.
+- Pages are 4608 × 3456 px, which is 72 × 54 in at 64 px per inch. Canva caps page size, so it can't hold 96 px per inch at this size.
+- To print from Canva, use Share, then Download, then PDF Print. Tell the printer the finished size is 72 × 54 in and that the file has no bleed. The PRINT-bleed PDFs here remain the reference print files.
+- Sources are in `canva-layers/`: the background, the logo layer and the import file.
 
 ## Ordering notes
 
