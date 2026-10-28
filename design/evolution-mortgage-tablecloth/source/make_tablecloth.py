@@ -18,14 +18,14 @@ def lockup(cx, cy, w):
 REP_W, REP_PX, REP_PY = 11.0, 18.0, 9.0      # repeat: lockup width, step along a row, row spacing (diamond offset)
 
 def repeat_marks(bleed=0.0):
-    """Diamond step-and-repeat: six whole rows (4.5 in from top and bottom), every other row shifted half a step, running off the sides."""
+    """Diamond repeat with every logo whole: five rows 10.5 in apart (centres 6 to 48 in), alternating four and three
+    logos 18 in apart, so nothing touches the cloth edges. On a 6 ft table the 12 in folds fall between rows, with one
+    full row on each drop."""
     out = []
-    for j in range(-4, 5):
-        cy = H/2 + (j + 0.5)*REP_PY
-        for i in range(-4, 5):
-            cx = W/2 + (i + (0.5 if j % 2 else 0)) * REP_PX
-            if -bleed - REP_W/2 < cx < W + bleed + REP_W/2 and -bleed - 4 < cy < H + bleed + 4:
-                out.append(dict(cx=cx, cy=cy))
+    for k in range(5):
+        cy = 6.0 + k * 10.5
+        xs = [9.0, 27.0, 45.0, 63.0] if k % 2 == 0 else [18.0, 36.0, 54.0]
+        out += [dict(cx=x, cy=cy) for x in xs]
     return out
 
 def build(layout='front', bleed=0.0, guides=False):

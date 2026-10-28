@@ -12,18 +12,9 @@ The main file puts the lockup on the **front drop**, 22 in wide, centred in the 
 table top is covered with food and coolers. `alternates/logo-centered/` has the lockup 34 in wide in the middle of the
 cloth, for a table that will stay clear or for a different table size.
 
-`alternates/repeat/` is an all-over step-and-repeat: 11 in lockups in a diamond pattern, 18 in apart along each row and 9 in
-between rows, every other row shifted half a step. Six whole rows sit between the top and bottom edges, and the pattern runs
-off both sides so it reads as continuous when it drapes.
-
-## Files
-
-| File | Use |
-| --- | --- |
-| `…-PRINT-bleed-1in.pdf` | **Send this.** 74 × 56 in page = 72 × 54 in finished + 1 in bleed all round. Vector. |
-| `…-trim.pdf` | Exact 72 × 54 in, for printers that add their own hem or bleed. |
-| `…-PROOF-guides.pdf`, `proof.png` | Proof only: trim, the 6 ft table top and the front drop. |
-| `….svg` | Editable vector master. |
+`alternates/repeat/` is an all-over diamond repeat with **every logo whole**. It has five rows of 11 in lockups, 10.5 in
+apart, alternating four and three logos 18 in apart. The nearest logo is 3.5 in from the sides and 4.3 in from the top and bottom.
+On a 6 ft table the folds over the table edge fall between rows, and each drop carries one full row.
 
 ## Canva
 
